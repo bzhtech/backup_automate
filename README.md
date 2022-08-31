@@ -15,12 +15,12 @@ on the ubuntu server :
 - update /etc/netplan/00-installer-config.yaml network interface configuration
 and  "netplan apply" , to apply the new configuration
 - update /etc/dhcpd/dhcpd.conf to match network subnet
-- update /srv/tftp/grub.cfg to match  your own server ip ( exposing a dhcp and tftp service as this address )
-- generate grubx64.efi with good tftp ip
-     grub-mkimage --format=x86_64-efi -o /srv/tftp/grubx64.efi --prefix='(tftp,192.168.0.2)/' efinet tftp
+- update /srv/tftp/grub.cfg to match  your own server ip ( exposing a dhcp and tftp service at this address W.X.Y.Z )
+- generate grubx64.efi with good tftp ip W.X.Y.Z
+     grub-mkimage --format=x86_64-efi -o /srv/tftp/grubx64.efi --prefix='(tftp,W.X.Y.Z)/' efinet tftp
 - verify the find the root@backup key in /home/bck/.ssh/authorized_keys ( used to mount custom scripts backup & restore via sshfs in /home/partimag/ )
      this key as been added the squashfs for automounting sshfs and gaining access to /home/bck on the server to the pxe clients
-- format the external usb partition with SAVE label:
+- format the external usb partition with SAVE label ( the clonezilla backup scripts search this label to know if external drive is present ) :
      mkfs.ntfs -f -L SAVE -s 4096 /dev/sdX1
 
 in clients Bios :
