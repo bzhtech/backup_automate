@@ -1,4 +1,5 @@
 #!/bin/bash
+# correction archi des fichiers grubs
 tmp=$$
 cp etc/apt/sources.list /etc/apt/
 dpkg --add-architecture amd64
