@@ -1,0 +1,9 @@
+# packages for orangepi
+deb [arch=aarch64] http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy main restricted universe multiverse
+deb [arch=aarch64] http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-security main restricted universe multiverse
+deb [arch=aarch64] http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-updates main restricted universe multiverse
+deb [arch=aarch64] http://mirrors.tuna.tsinghua.edu.cn/ubuntu-ports/ jammy-backports main restricted universe multiverse
+# amd64 grub mod files for amd64 pxe clients
+deb [arch=amd64] http://fr.archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse
+deb [arch=amd64] http://fr.archive.ubuntu.com/ubuntu/ jammy-security main restricted universe multiverse
+deb [arch=amd64] http://fr.archive.ubuntu.com/ubuntu/ jammy-updates main restricted universe multiverse
